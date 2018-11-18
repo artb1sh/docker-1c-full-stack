@@ -7,7 +7,7 @@ COPY hasp.sh /
 COPY hasplm.ini /etc/hasplm/
 
 RUN localedef --inputfile ru_RU --force --charmap UTF-8 --alias-file /usr/share/locale/locale.alias ru_RU.UTF-8 \
-    && yum -y install vim which glibc.i686 usbutils net-tools \
+    && yum -y install which glibc.i686 usbutils \
     && curl -o /tmp/hasp.rpm -SL "https://download.etersoft.ru/pub/Etersoft/HASP/last/CentOS/7/haspd-7.60-eter1centos.x86_64.rpm" \
     && curl -o /tmp/hasp-modules.rpm -SL "https://download.etersoft.ru/pub/Etersoft/HASP/last/CentOS/7/haspd-modules-7.60-eter1centos.x86_64.rpm" \
     && yum install -y /tmp/*.rpm && rm /tmp/*.rpm \
