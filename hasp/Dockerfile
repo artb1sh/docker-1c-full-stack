@@ -1,4 +1,5 @@
 FROM centos:latest
+MAINTAINER artb1sh@yandex.ru
 
 ENV LANG ru_RU.utf8
 
